@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import { Fragment, useContext } from 'react'; // Fragment will replace div in html and will not show
 import { Outlet, Link } from 'react-router-dom';
 
 import { UserContext } from '../../contexts/user.context';
