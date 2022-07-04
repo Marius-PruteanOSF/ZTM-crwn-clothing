@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store/store';
-import './index.scss';
+//import './index.scss';
+import { GlobalStyle } from './global.styles';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -21,7 +22,8 @@ root.render(
         {/* <CategoriesProvider> */}
           {/* <CartProvider> */}
           <Elements stripe={stripePromise}>
-            <App />
+            <GlobalStyle/>
+              <App />
           </Elements>
           {/* </CartProvider> */}
         {/* </CategoriesProvider> */}
