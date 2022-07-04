@@ -9,6 +9,8 @@ import reportWebVitals from './reportWebVitals';
 import { PersistGate } from 'redux-persist/integration/react';
 // import {CategoriesProvider } from './contexts/categories.context';
 // import { CartProvider } from './contexts/cart.context';
+import { Elements } from '@stripe/react-stripe-js';
+import { stripePromise } from './utils/stripe/stripe.utils';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +20,9 @@ root.render(
       <BrowserRouter>
         {/* <CategoriesProvider> */}
           {/* <CartProvider> */}
+          <Elements stripe={stripePromise}>
             <App />
+          </Elements>
           {/* </CartProvider> */}
         {/* </CategoriesProvider> */}
       </BrowserRouter>
